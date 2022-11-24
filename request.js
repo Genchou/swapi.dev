@@ -46,6 +46,11 @@ async function getResource(
   return resource;
 }
 
-exports.getFilm = (id) => {
-  return getResource(makeRequest, "films", id, true);
+function getFilm(requester, id) {
+  return getResource(requester, "films", id, true);
+}
+
+module.exports = {
+  getFilm,
+  makeRequest,
 };

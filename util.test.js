@@ -12,7 +12,7 @@ const testPlanets = [
     surface_water: "15",
   },
   {
-    name: "Planet A",
+    name: "Planet B",
     diameter: "24",
     terrain: "desert, jungles",
     surface_water: "0",

@@ -1,4 +1,4 @@
-const { getFilm } = require("./request");
+const { getFilm, makeRequest } = require("./request");
 const {
   planetHasBiome,
   planetHasWater,
@@ -10,7 +10,7 @@ function usage() {
 }
 
 async function getFilmData(id) {
-  const filmData = await getFilm(id);
+  const filmData = await getFilm(makeRequest, id);
   const planets = await filmData.getPlanets();
   return {
     ...filmData,
