@@ -1,4 +1,4 @@
-import axios from "axios";
+const axios = require("axios");
 
 const basePath = "https://swapi.dev/api";
 
@@ -46,6 +46,6 @@ async function getResource(
   return resource;
 }
 
-export async function getFilm(id) {
+exports.getFilm = (id) => {
   return getResource(makeRequest, "films", id, true);
-}
+};
